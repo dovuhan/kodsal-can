@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Ek tema stilleri: tailwind-theme reposundan alınan dosyayı src/theme.css olarak eklediğinizi varsayıyoruz */
+@import "./theme.css";
+
+/* Global düzenlemeler */
+body {
+  /* Örneğin, tema içerisine eklediğiniz arka plan resmi varsa: */
+  /* background-image: url('/src/assets/background.jpg'); */
+  background-size: cover;
+}

@@ -1,23 +1,21 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Dashboard from './pages/Dashboard';
-import Profile from './pages/Profile';
-import Exams from './pages/Exams';
-import Sidebar from './components/Sidebar';
+import Home from './pages/Home';
+import About from './pages/About';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <Router>
-      <div className="flex min-h-screen">
-        {/* Sol menü */}
-        <Sidebar />
-        {/* Ana içerik alanı */}
-        <main className="flex-1 bg-gray-100 p-6">
+      <div className="flex flex-col min-h-screen">
+        <Navbar />
+        <main className="flex-grow">
           <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/exams" element={<Exams />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
           </Routes>
         </main>
+        <Footer />
       </div>
     </Router>
   );
